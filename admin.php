@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<title>Lovabulb Home &ndash; Nicole Shebroe</title>
+	<title>Lovabulb Admin &ndash; Nicole Shebroe</title>
 	<link href='http://fonts.googleapis.com/css?family=|Inder|Quicksand:400,700' rel='stylesheet' type='text/css' />
 	<style type='text/css'  media='all'>
 		@import 'css/reset.css';
@@ -25,7 +25,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="container">
 	<div id="header">
@@ -72,106 +71,35 @@
 	</div>
 </div>
 
-
-
 <div class="container">
-	<div id="featured">
-		<div class="row">
-			<div class="sevencol">
-			<?php
-				//connection to sulley
-				$connection = mysql_connect("sulley.cah.ucf.edu", "ni718068", "12Nicole");
-				mysql_select_db("ni718068", $connection);
-				
-				//query1 pulling important info from database into array
-				$query = "SELECT * FROM products";
-				$result = mysql_query($query);
-				while($item = mysql_fetch_array($result)){
-					$id=$item['id'];
-					$productName=$item['productName'];
-					$price=$item['price'];
-					$image=$item['productImage'];
-					$rating=$item['rating'];
-					$featured=$item['featured'];
-					}
-				//query2 pulling featured image for homepage
-				$query2 = "SELECT featuredImage FROM products WHERE featured = 1";
-				$result2 = mysql_query($query2);
-				
-				while($featured = mysql_fetch_array($result2)){
-					$imageft=$featured['featuredImage'];
-					$imagepr=$featured['price'];
-					print "<span class='fim'><img src='img/database/$imageft' alt='featured' /></span>";
-				}
-			?>
-			</div>
-			<div class="threecol">
-				<div class="fp">
-					<h3>I Moustache You to Buy This Shade</h3>
-					<p>Today's featured lamp shade will instantly make you 100% cooler. Buy it now or add it to your wishlist and shave it for later. </p>
-					<?php
-						print "$imagepr";
-					?>
-					<p><a href="cart.php">Add to Cart</a></p>
-				</div>
-			</div>
-			<div class="twocol last">
-				<div class="special">
-					<img src="img/database/misc/chefsale.jpg" alt="featured" />
-					<h4>Current Sale</h4>
-					<p>Check out some of our best deals ever!</p>
-					<p><a href="catalog.php">Shop the Sale...</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div id="new">
+	<div id="admin">
 		<div class="row">
 			<div class="twelvecol">
-				<h3>What's New...</h3>
-				
-				<?php
-
-					//query2 pulling featured image for homepage
-					$query2 = "SELECT productImage FROM products LIMIT 7";
-					$result2 = mysql_query($query2);
-					
-					while($new = mysql_fetch_array($result2)){
-						$image=$new['productImage'];
-						print "<a href='catalog.php'><img src='img/database/$image' alt='new' /></a>";
-					}
-				?>
-				<p><a href="catalog.php">See more...</a></p>
+				<div id="options">
+					<h2>Admin Options</h2>
+						<div class="adminl">
+							<h3>Users</h3>
+								<ul>
+									<li><a href="#">Edit User</a></li>
+									<li><a href="#">Delete User</a></li>
+									<li><a href="#">User Information</a></li>
+								</ul>
+						</div>
+						<div class="adminl">
+							<h3>Products</h3>
+								<ul>
+									<li><a href="#">Name</a></li>
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Price</a></li>
+									<li><a href="#">Delete Item</a></li>
+								</ul>	
+						</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container">	
-	<div id="decor">
-		<div class="row">
-			<div class="threecol">
-				<p><a href="catalog.php"><img src="img/catlover.jpg" alt="decor" /></a></p>
-			</div>
-			<div class="sixcol">
-				<div class="decorbox">
-					<h3>Cat Lover?</h3>
-					<p>If you love cats, we have the perfect lighting for you. This bronze-cast lamp features a beautiful stretching cat that is ready to light up your desk. The vintage stained glass shade is the perfect touch of old-style to bring in whimsy to your decor. Use this one-of-a-kind cat lamp as the focal point of your room and never feel sad again!</p>
-				</div>
-				<div class="decorbox">
-					<h3>Dogs More Your Thing?</h3>
-					<p>If cats just aren't cutting it for you, this dog lamp is sure to bring a smile to your face. Class up any room with this porcelain dog lamp that features the French Bulldog, Bowser. Bowser's cute face will light up your room perfectly. Bring a touch of France to your home.</p>
-				</div>
-			</div>
-			<div class="threecol last">
-				<p><a href="catalog.php"><img src="img/doglover.jpg" alt="decor" /></a></p>
-			</div>
-		</div>
-	</div>
-</div>
 
 <div class="container">
 	<div id="contactbar">

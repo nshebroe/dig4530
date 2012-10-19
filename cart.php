@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<title>Lovabulb Home &ndash; Nicole Shebroe</title>
+	<title>Lovabulb Cart &ndash; Nicole Shebroe</title>
 	<link href='http://fonts.googleapis.com/css?family=|Inder|Quicksand:400,700' rel='stylesheet' type='text/css' />
 	<style type='text/css'  media='all'>
 		@import 'css/reset.css';
@@ -25,7 +25,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="container">
 	<div id="header">
@@ -72,60 +71,100 @@
 	</div>
 </div>
 
-
-
 <div class="container">
-	<div id="featured">
+	<div id="cattop">
 		<div class="row">
-			<div class="sevencol">
-			<?php
-				//connection to sulley
-				$connection = mysql_connect("sulley.cah.ucf.edu", "ni718068", "12Nicole");
-				mysql_select_db("ni718068", $connection);
-				
-				//query1 pulling important info from database into array
-				$query = "SELECT * FROM products";
-				$result = mysql_query($query);
-				while($item = mysql_fetch_array($result)){
-					$id=$item['id'];
-					$productName=$item['productName'];
-					$price=$item['price'];
-					$image=$item['productImage'];
-					$rating=$item['rating'];
-					$featured=$item['featured'];
-					}
-				//query2 pulling featured image for homepage
-				$query2 = "SELECT featuredImage FROM products WHERE featured = 1";
-				$result2 = mysql_query($query2);
-				
-				while($featured = mysql_fetch_array($result2)){
-					$imageft=$featured['featuredImage'];
-					$imagepr=$featured['price'];
-					print "<span class='fim'><img src='img/database/$imageft' alt='featured' /></span>";
-				}
-			?>
+			<div class="fourcol">
+				<a href="catalog.php"><img src="img/database/shade/mustachesmall2.jpg" alt="featured" /></a>
 			</div>
 			<div class="threecol">
-				<div class="fp">
-					<h3>I Moustache You to Buy This Shade</h3>
-					<p>Today's featured lamp shade will instantly make you 100% cooler. Buy it now or add it to your wishlist and shave it for later. </p>
-					<?php
-						print "$imagepr";
-					?>
-					<p><a href="cart.php">Add to Cart</a></p>
+				<div class="catt">
+					<h2>Featured Item</h2>
+					<p>Feast your eyes on this moustache shade!</p>
 				</div>
 			</div>
+			<div class="threecol">
+				<img src="img/database/misc/sale.jpg" alt="featured" />
+			</div>
 			<div class="twocol last">
-				<div class="special">
-					<img src="img/database/misc/chefsale.jpg" alt="featured" />
-					<h4>Current Sale</h4>
-					<p>Check out some of our best deals ever!</p>
-					<p><a href="catalog.php">Shop the Sale...</a></p>
+				<div class="catt">
+					<h2>Current Sales</h2>
+					<p>This week's sale features nightlights. Go crazy!</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<div class="container">
+	<div id="shop">
+		<div class="row">
+			<div class="twocol">
+				<div id="subnav">
+					<ul>
+						<li><a href="catalog.php">Shop All</a></li>
+						<li><a href="catalog.php?category=shade">Floor Lamps</a></li>
+						<li><a href="catalog.php?category=misc">Table Lamps</a></li>
+						<li><a href="catalog.php?category=shade">Ceiling Lamps</a></li>
+						<li><a href="catalog.php?category=misc">Wall Lamps</a></li>
+						<li><a href="catalog.php?category=shade">Lamp Shades</a></li>
+						<li><a href="catalog.php?category=misc">Miscellaneous</a></li>
+					</ul>
+				</div>
+				<div id="suggestions">
+					<h3>Suggested Items</h3>
+					<a href="catalog.php"><img src="img/database/shade/aloha.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/shade/moose.jpg" alt="suggestions" /></a><br/>
+					<a href="catalog.php"><img src="img/database/misc/monkey.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/misc/chef.jpg" alt="suggestions" /></a>
+				</div>
+			</div>
+			<div class="tencol last">
+				<div id="cartview">
+					<h1>Cart</h1>
+					<div class="cartitem">
+						<img src="img/database/shade/mustache.jpg" alt="cartitem" />
+						<p>Moustache Shade<br/>
+						$66.99<br/>
+						<a href="#">remove from cart</a></p>
+					</div>
+					<div class="cartitem">
+						<img src="img/database/shade/aloha.jpg" alt="cartitem" />
+						<p>Aloha Shade<br/>
+						$40.99<br/>
+						<a href="#">remove from cart</a></p>
+					</div>
+					<p><strong>Total:</strong> $107.98</p>
+						<div id="checkout">
+							<h2>Checkout</h2>
+							<h3>Personal Information</h3>
+							<form class="check">
+								First name: <input type="text" name="firstname"><br/>
+								Last name: <input type="text" name="lastname"><br/>
+								Email: <input type="text" name="email">
+							</form>
+							<h3>Shipping Information</h3>
+							<form class="check">
+								Address Line 1: <input type="text" name="firstname"><br/>
+								Address Line 2: <input type="text" name="lastname"><br/>
+								City: <input type="text" name="lastname"><br/>
+								State: <input type="text" name="lastname"><br/>
+								Zip Code: <input type="text" name="lastname"><br/>
+								Phone Number: <input type="text" name="lastname">
+							</form>
+							<h3>Billing Information</h3>
+							<form class="check">
+								Credit Card #: <input type="text" name="firstname"><br/>
+								Security Code: <input type="text" name="firstname"><br/>
+								Phone Number: <input type="text" name="lastname">
+							</form>
+							<input type="submit" value="Submit">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="container">
 	<div id="new">
@@ -134,7 +173,9 @@
 				<h3>What's New...</h3>
 				
 				<?php
-
+					$connection = mysql_connect("sulley.cah.ucf.edu", "ni718068", "12Nicole");
+					mysql_select_db("ni718068", $connection);
+				
 					//query2 pulling featured image for homepage
 					$query2 = "SELECT productImage FROM products LIMIT 7";
 					$result2 = mysql_query($query2);
@@ -145,29 +186,6 @@
 					}
 				?>
 				<p><a href="catalog.php">See more...</a></p>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container">	
-	<div id="decor">
-		<div class="row">
-			<div class="threecol">
-				<p><a href="catalog.php"><img src="img/catlover.jpg" alt="decor" /></a></p>
-			</div>
-			<div class="sixcol">
-				<div class="decorbox">
-					<h3>Cat Lover?</h3>
-					<p>If you love cats, we have the perfect lighting for you. This bronze-cast lamp features a beautiful stretching cat that is ready to light up your desk. The vintage stained glass shade is the perfect touch of old-style to bring in whimsy to your decor. Use this one-of-a-kind cat lamp as the focal point of your room and never feel sad again!</p>
-				</div>
-				<div class="decorbox">
-					<h3>Dogs More Your Thing?</h3>
-					<p>If cats just aren't cutting it for you, this dog lamp is sure to bring a smile to your face. Class up any room with this porcelain dog lamp that features the French Bulldog, Bowser. Bowser's cute face will light up your room perfectly. Bring a touch of France to your home.</p>
-				</div>
-			</div>
-			<div class="threecol last">
-				<p><a href="catalog.php"><img src="img/doglover.jpg" alt="decor" /></a></p>
 			</div>
 		</div>
 	</div>
