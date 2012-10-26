@@ -1,7 +1,6 @@
-dig4530
+DIG4530
 =======
 
-e-commerce project
+TO DO:
+======
 
-#This is our readme
--Bill
