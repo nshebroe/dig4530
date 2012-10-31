@@ -11,19 +11,6 @@
 		@import 'css/styles.css';
 	</style>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-35842504-1']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
 </head>
 
 <body>
@@ -89,10 +76,10 @@
 				<ul>
 					<li><a href="home.php">Home</a></li>
 					<li><a href="catalog.php">Shop All</a></li>
-					<li><a href="catalog.php?category=shade">Floor Lamps</a></li>
-					<li><a href="catalog.php?category=misc">Table Lamps</a></li>
-					<li><a href="catalog.php?category=shade">Ceiling Lamps</a></li>
-					<li><a href="catalog.php?category=misc">Wall Lamps</a></li>
+					<li><a href="catalog.php?category=floor">Floor Lamps</a></li>
+					<li><a href="catalog.php?category=table">Table Lamps</a></li>
+					<li><a href="catalog.php?category=ceiling">Ceiling Lamps</a></li>
+					<li><a href="catalog.php?category=wall">Wall Lamps</a></li>
 					<li><a href="catalog.php?category=shade">Lamp Shades</a></li>
 					<li><a href="catalog.php?category=misc">Miscellaneous</a></li>
 				</ul>
@@ -162,18 +149,18 @@
 							
 							print "<div class='productdet'>
 								<a href='#'><img src='img/database/$image' alt='product' /></a><br/><div class='ptext'>
-								<span class='productn'><a href='#'><h3>$productName</h3><p>$price<br/></p></a></span></div>";
+								<div class='productn'><h3>$productName</h3>$price<br/></div></div>";
 							
 							print "<div class='rating'>";
 							for($i=0;$i<$rating;$i++){
-								print "<span class='rating'><img src='img/ratingbulb.png' alt='rating' /></span>";
+								print "<div class='rating'><img src='img/ratingbulb.png' alt='rating' /></div>";
 							}
 							
 							
 							
 							$remainder = 5 - $rating;
 							for($i=0;$i<$remainder;$i++){
-								print "<span class='rating'><img src='img/ratingbulb2.png' alt='rating' /></span>";
+								print "<div class='rating'><img src='img/ratingbulb2.png' alt='rating' /></div>";
 							}
 							print "</div></div>";
 						}
@@ -223,10 +210,10 @@
 				<div class="infobox">
 					<h4>Our Products</h4>
 						<p><a href="catalog.php">Shop All</a></p>
-						<p><a href="catalog.php?category=shade">Floor Lamps</a></p>
-						<p><a href="catalog.php?category=misc">Table Lamps</a></p>
-						<p><a href="catalog.php?category=shade">Ceiling Lamps</a></p>
-						<p><a href="catalog.php?category=misc">Wall Lamps</a></p>
+						<p><a href="catalog.php?category=floor">Floor Lamps</a></p>
+						<p><a href="catalog.php?category=table">Table Lamps</a></p>
+						<p><a href="catalog.php?category=ceiling">Ceiling Lamps</a></p>
+						<p><a href="catalog.php?category=wall">Wall Lamps</a></p>
 						<p><a href="catalog.php?category=shade">Lamp Shades</a></p>
 						<p><a href="catalog.php?category=misc">Miscellaneous</a></p>
 					</div>

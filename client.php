@@ -72,10 +72,10 @@
 				<ul>
 					<li><a href="home.php">Home</a></li>
 					<li><a href="catalog.php">Shop All</a></li>
-					<li><a href="catalog.php?category=shade">Floor Lamps</a></li>
-					<li><a href="catalog.php?category=misc">Table Lamps</a></li>
-					<li><a href="catalog.php?category=shade">Ceiling Lamps</a></li>
-					<li><a href="catalog.php?category=misc">Wall Lamps</a></li>
+					<li><a href="catalog.php?category=floor">Floor Lamps</a></li>
+					<li><a href="catalog.php?category=table">Table Lamps</a></li>
+					<li><a href="catalog.php?category=ceiling">Ceiling Lamps</a></li>
+					<li><a href="catalog.php?category=wall">Wall Lamps</a></li>
 					<li><a href="catalog.php?category=shade">Lamp Shades</a></li>
 					<li><a href="catalog.php?category=misc">Miscellaneous</a></li>
 				</ul>
@@ -177,10 +177,10 @@
 				<div class="infobox">
 					<h4>Our Products</h4>
 						<p><a href="catalog.php">Shop All</a></p>
-						<p><a href="catalog.php?category=shade">Floor Lamps</a></p>
-						<p><a href="catalog.php?category=misc">Table Lamps</a></p>
-						<p><a href="catalog.php?category=shade">Ceiling Lamps</a></p>
-						<p><a href="catalog.php?category=misc">Wall Lamps</a></p>
+						<p><a href="catalog.php?category=floor">Floor Lamps</a></p>
+						<p><a href="catalog.php?category=table">Table Lamps</a></p>
+						<p><a href="catalog.php?category=ceiling">Ceiling Lamps</a></p>
+						<p><a href="catalog.php?category=wall">Wall Lamps</a></p>
 						<p><a href="catalog.php?category=shade">Lamp Shades</a></p>
 						<p><a href="catalog.php?category=misc">Miscellaneous</a></p>
 					</div>
@@ -212,7 +212,7 @@
 		<div class="row">
 			<div class="twelvecol">
 				<p>This site is not official and is an assignment for a UCF Digital Media course<br/>
-				designed by Nicole Shebroe</p>
+				designed by Nicole Shebroe/Group 4</p>
 			</div>
 		</div>
 	</div>

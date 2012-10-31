@@ -1,9 +1,8 @@
 body{
 	background-image:url('../img/straws.png');
-	font-family:'century gothic';
+	font-family:'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	line-height:19px;
 }
-
 
 #topbar{
 	background-color:#bfe0de;
@@ -35,6 +34,7 @@ body{
 	width:55px;
 	font-size:12px;
 }
+
 .textcolor{
 	color:#59918d;
 }
@@ -60,8 +60,9 @@ body{
 	color:#59918d;
 	font-weight:800;
 	padding-bottom:10px;
+	border-bottom:2px solid #fff;
 	font-size:22px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Quicksand', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 
 #nav{
@@ -109,17 +110,21 @@ body{
 #featured h3{
 	color:#59918d;
 	font-size:26px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
 	margin-bottom:10px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
 #featured h4{
 	color:#59918d;
 	font-size:24px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
 	margin-bottom:10px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
 #featured p{
@@ -148,6 +153,11 @@ body{
 	background: -moz-linear-gradient(top,  #59918d,  #3a5f5c);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59918d', endColorstr='#3a5f5c');
 	border-radius:5px;
+}
+
+.ftprice{
+	color:#59918d;
+	font-weight:600;
 }
 
 #featured a, #new a{
@@ -184,9 +194,11 @@ body{
 #new h3{
 	color:#59918d;
 	font-size:24px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
 	margin-bottom:10px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
 #new img{
@@ -233,8 +245,10 @@ body{
 .decorbox h3{
 	color:#59918d;
 	font-size:20px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
 #contactbar{
@@ -243,15 +257,18 @@ body{
 	border-width:1px 0;
 	height:auto;
 	padding-top:10px;
+	font-family:'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 
 #contactbar h2{
-	font-family:'Quicksand', 'sans-serif';
+	font-family:'Quicksand', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:800;
 	color:#59918d;
 	font-size:22px;
 	float:right;
 	padding-right:10px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 	
 #banner{
@@ -278,7 +295,8 @@ body{
 	padding-bottom:3px;
 	color:#59918d;
 	font-weight:600;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	border-bottom:2px solid #fff;
 }
 
 #infobar a{
@@ -319,9 +337,11 @@ body{
 #cattop h2{
 	color:#59918d;
 	font-size:18px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
 	margin-bottom:10px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
 #cattop img{
@@ -330,6 +350,9 @@ body{
 	background-color:#fff;
 }
 
+#cattop img:hover{
+	border:2px solid #000;
+}
 
 .catt{
 	padding:5px;
@@ -369,25 +392,26 @@ body{
 	max-width:60px;
 	max-height:60px;
 	padding:2px;
-	margin-right:2px;
-	margin-bottom:2px;
+	margin-right:4px;
+	margin-bottom:4px;
 	border:1px solid #59918d;
 	background-color:#fff;
+}
+
+#suggestions img:hover{
+	border:1px solid #000;
 }
 
 #suggestions h3{
 	color:#59918d;
 	font-size:17px;
-	font-family:'Quicksand','century gothic';
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-weight:600;
 	margin-bottom:5px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
 }
 
-#suggestions img{
-	padding-right:5px;
-	padding-top:5px;
-	}
-	
 #mainshop{
 	border:1px solid #ccc;
 	border-width:1px 1px;
@@ -395,7 +419,6 @@ body{
 	padding:10px;
 	overflow: auto;
 	height:100%;
-	
 }
 
 .productdet{
@@ -406,7 +429,6 @@ body{
 	padding:10px;
 	margin-left:10px;
 }
-
 
 .productdet img{
 	max-height:130px;
@@ -443,7 +465,13 @@ body{
 	border:0px;
 	max-width:15px;
 	background-color:transparent; 
-	
+	float:left;
+}
+
+.rating img:hover{
+	border:0px;
+	max-width:15px;
+	background-color:transparent; 
 }
 
 #comingsoon{
@@ -459,14 +487,13 @@ body{
 
 #admin{
 	margin:10px;
-
 }
 
 #options{
 	background-color:#ddd;
 	height:300px;
 	padding:10px;
-		border:1px dashed #ccc;
+	border:1px dashed #ccc;
 }
 
 #admin h2{
@@ -474,18 +501,30 @@ body{
 	font-weight:800;
 	color:#59918d;
 	padding-bottom:10px;
-	
+	border-bottom:2px solid #fff;
 }
+
+
 
 .adminl{
 	float:left;
-	border:1px solid #ccc;
+	border:1px solid #ddd;
 	border-width:1px 1px;
 	padding:10px;
 	background-color:#ccc;
 	margin:10px;
 	width:300px;
 	height:200px;
+	font-size:12px;
+}
+
+#options h3{
+	font-size:14px;
+	font-weight:800;
+	color:#59918d;
+	padding-bottom:5px;
+	border-bottom:2px solid #fff;
+	margin-bottom:10px;
 }
 
 #admin a{
@@ -497,7 +536,8 @@ body{
 }
 
 .cartitem{
-
+	float:left;
+	padding:10px;
 }
 
 .cartitem img{
@@ -505,17 +545,36 @@ body{
 	padding:5px;
 	background-color:#fff;
 	border:3px solid #59918d;
+	margin-bottom:5px;
 }
 
 .cartitem img:hover{
 	border:3px solid #000;
 }
 
+.total{
+	float:right;
+	font-weight:bold;
+	padding:10px;
+	background-color:#fff;
+	border:1px dashed #59918d;
+}
+
+#cartview h1{
+	font-size:20px;
+	font-weight:800;
+	color:#59918d;
+	padding-bottom:10px;
+	border-bottom:2px solid #fff;
+}
+
 #checkout h2{
 	font-size:18px;
 	font-weight:800;
 	color:#59918d;
-	padding-bottom:10px;
+	padding-bottom:2px;
+	border-bottom:2px solid #fff;
+	margin-bottom:4px;
 }
 
 #checkout h3{
@@ -531,6 +590,7 @@ body{
 	border-width:1px 1px;
 	background-color:#ddd;
 	padding:10px;
+	height:500px;
 	
 }
 
@@ -538,7 +598,6 @@ body{
 	background-color:#ccc;
 	border:1px dashed #666;
 	padding:10px;
-	margin:10px;
 	font-size:14px;
 }
 
@@ -550,4 +609,117 @@ body{
 .check{
 	padding-left:30px;
 	padding-bottom:10px;
+}
+
+.cart{
+	padding:20px;
+	margin-left:10px;
+}
+
+.cart:first-child{
+	padding-right:100px;
+	float:left;
+	width:400px;
+}
+
+.cart:last-child{
+	float:right;
+}
+
+.remove{
+	font-size:10px;
+	margin-top:10px;
+}
+
+.remove a{
+	color:#666;
+}
+
+#client{
+	border:1px solid #ccc;
+	border-width:1px 1px;
+	background-color:#ddd;
+	padding:10px;
+	height:500px;
+}
+
+#user{
+	border:1px solid #ccc;
+	border-width:1px 1px;
+	background-color:#ddd;
+	padding:10px;
+	height:150px;
+}
+
+#bought{
+	border:1px solid #ccc;
+	border-width:1px 1px;
+	background-color:#ddd;
+	padding:10px;
+	margin-top:10px;
+	height:320px;
+}
+
+#bought img{
+	max-height:90px;
+	padding:5px;
+	border:1px solid #59918d;
+	background-color:#fff;
+	margin:5px;
+	float:left;
+}
+
+#bought img:hover{
+	border:1px solid #000;
+}
+
+#user h2, #bought h2, #client h2{
+	color:#59918d;
+	font-size:18px;
+	font-weight:600;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
+	margin-bottom:10px;
+}
+
+.userpro{
+	float:left;
+}
+
+.userpro:first-child{
+	width:60px;
+}
+
+.userpro:last-child{
+	width:100px;
+	font-size:12px;
+}
+
+.userpro a{
+	color:#000;
+}
+
+.userpro img{
+	max-width:70px;
+	background-color:#fff;
+	padding:3px;
+	border:2px solid #59918d;
+	margin-right:10px;
+}
+
+.userpro img:hover{
+	border:2px solid #000;
+}
+
+#client ul{
+	margin-left:30px;	
+}
+
+#client ul li:last-child{
+	text-align:right;
+	font-size:10px;
+}
+
+#client a{
+	color:#666;
 }
