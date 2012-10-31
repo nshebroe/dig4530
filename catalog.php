@@ -221,10 +221,12 @@
 			<div class="threecol">
 				<div class="infobox">
 					<h4>Company Policies</h4>
-						<p><a href="comingsoon.php">Buying Policy</a></p>
-						<p><a href="comingsoon.php">Shipping Policy</a></p>
-						<p><a href="comingsoon.php">Terms of Service</a></p>
-						<br/><br/><br/>
+						<p><a href="policies.php#shipping">Shipping Policy</a></p>
+						<p><a href="policies.php#tax">Tax Policy</a></p>
+						<p><a href="policies.php#return">Return Policy</a></p>
+						<p><a href="policies.php#privacy">Privacy Policy</a></p>
+						<p><a href="policies.php#security">Security Statement</a></p>
+						<br/><br/>
 					</div>
 			</div>
 			<div class="threecol last">
