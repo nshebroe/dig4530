@@ -417,17 +417,43 @@ body{
 	border-width:1px 1px;
 	background-color:#ddd;
 	padding:10px;
-	overflow: auto;
-	height:100%;
+	overflow:hidden;
+	height:auto;
 }
 
 .productdet{
 	float:left;
 	width:150px;
-	height:250px;
+	height:300px;
 	text-align:center;
 	padding:10px;
 	margin-left:10px;
+}
+.button{
+	margin:10px;
+	display:inline-block;
+	font-size:10px;
+	padding:7px;
+	height:13px;
+	color:#bfe0de;
+	background-color:#59918d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#bfe0de), to(#e7f8f7));
+	background: -moz-linear-gradient(top,  #bfe0de,  #e7f8f7);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfe0de', endColorstr='#e7f8f7');
+	color:#59918d;
+	border-radius:5px;
+	text-decoration:none;
+	border:1px dashed #59918d;
+	}
+	
+.button:hover{
+	color:#bfe0de;
+	text-decoration:none;
+	background-color:#59918d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#59918d), to(#3a5f5c));
+	background: -moz-linear-gradient(top,  #59918d,  #3a5f5c);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59918d', endColorstr='#3a5f5c');
+	border-radius:5px;
 }
 
 .productdet img{
@@ -442,7 +468,11 @@ body{
 }
 
 .ptext{
-	height:65px;
+	height:105px;
+}
+
+.productn{
+	height:350px;
 }
 
 .productn h3{
@@ -592,6 +622,7 @@ body{
 	padding:10px;
 	height:500px;
 	
+	
 }
 
 #checkout{
@@ -599,6 +630,7 @@ body{
 	border:1px dashed #666;
 	padding:10px;
 	font-size:14px;
+	float:right;
 }
 
 #checkout strong{
@@ -722,4 +754,49 @@ body{
 
 #client a{
 	color:#666;
+}
+
+#policies{
+	border:1px solid #ccc;
+	border-width:1px 1px;
+	padding:10px;
+	background-color:#ddd;
+	margin:10px;
+	width:auto;
+	height:200px;
+	font-size:12px;
+	overflow:auto;
+	height:auto;
+}
+
+#policies p{
+	line-height:20px;
+	margin-left:15px;
+	margin-bottom:5px;
+}
+
+.policy h3{
+	color:#59918d;
+	font-size:17px;
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-weight:600;
+	margin-bottom:10px;
+	margin-top:15px;
+	border-bottom:2px solid #fff;
+	padding-bottom:5px;
+}
+
+.policy h4{
+	color:#59918d;
+	font-size:14px;
+	font-family:'Quicksand','Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-weight:600;
+	margin-bottom:10px;
+	padding-bottom:5px;
+	padding-top:10px;
+	margin-left:15px;
+}
+
+#policies a{
+	color:#59918d;
 }

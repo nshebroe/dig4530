@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<title>Lovabulb Coming Soon &ndash; Nicole Shebroe</title>
+	<title>Policies &ndash; Group 4</title>
 	<link href='http://fonts.googleapis.com/css?family=|Inder|Quicksand:400,700' rel='stylesheet' type='text/css' />
 	<style type='text/css'  media='all'>
 		@import 'css/reset.css';
@@ -36,7 +37,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">2</span>]</a> <span class="textcolor">|</span> <a href="admin.php">Admin</a></p>
+			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">#</span>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -72,6 +73,7 @@
 		<div class="row">
 			<div class="twelvecol">
 				<ul>
+					<li><a href="home.php">Home</a></li>
 					<li><a href="catalog.php">Shop All</a></li>
 					<li><a href="catalog.php?category=floor">Floor Lamps</a></li>
 					<li><a href="catalog.php?category=table">Table Lamps</a></li>
@@ -86,21 +88,21 @@
 </div>
 
 <div class="container">
-	<div id="comingsoon">
+	<div id="policies">
 		<div class="row">
 			<div class="twelvecol">
 				
-				<div class="shipping">
+				<div class="policy">
 					<a id="shipping"></a><h3>Shipping Policy</h3>
 						<p>SHIP ME STUFF</p>
 				</div>
 				
-				<div class="tax">
+				<div class="policy">
 					<a id="tax"></a><h3>Tax Policy</h3>
 						<p>TAXES!!!!</p>
 				</div>
 				
-				<div class="returns">
+				<div class="policy">
 
 					<a id="return"></a><h3>Return Policy</h3>
 						<p>Like many retailers, we guarantee our products; if an item hasn’t met your expectations, you can bring it back. Unlike most retailers, we also guarantee the product selection advice offered through our catalog, website, and staff; if an item you’ve purchased based on this advice turns out to be unsuitable, you can bring it back. In either case, simply return the item for exchange, refund, repair, or credit. </p>
@@ -110,21 +112,19 @@
 							<p>Returns and exchanges can be made at any one of our stores, or by mail. Please call our Service Center, if you wish to return or cancel an order placed online. Please note: Our retail stores cannot accept returns by mail or courier. </p>
 
 						<h4>Returning by mail</h4>
-							<ul>
-								<li>Within the US: Returned items must be sent via insured, prepaid Regular US Mail. Ensuring your return allows you to track your parcel with the US Postal Service. Please Note: We cannot accept CODs or courier deliveries.</li>
-								<li>Outside the US: Ship goods prepaid, by insured ground shipping. To avoid unnecessary delays, please write “U.S. Goods returning” on the outside of the package.</li>
-							</ul>
-					
-							<h5>Please Note:</h5> 
+							<p>Within the US: Returned items must be sent via insured, prepaid Regular US Mail. Ensuring your return allows you to track your parcel with the US Postal Service. Please Note: We cannot accept CODs or courier deliveries.</p>
+							<p>Outside the US: Ship goods prepaid, by insured ground shipping. To avoid unnecessary delays, please write “U.S. Goods returning” on the outside of the package.</p>
+												
+						<h4>Please Note:</h4> 
 								<p>Do not return items by UPS or other carriers, as duty and / or brokerage fees will be charged, and your return will be refused by [ Lovabulb ]. </p>
 								<p>If you are requesting an exchange, please remember to include sufficient payment for the return postage. Where applicable, please contact your local customs office for information about any taxes or duties that may be assessed on a return shipment. </p>
 
-							<h5>Please note:</h5> 
+							<h4>Please note:</h4> 
 								<p>Our Processing Center cannot accept returns in person. Mail returns to: [ Lovabulb, P. Sherman, 42 Wallaby Way, Sydney, Australlia]</p>
 				</div>
 				
 
-				<div class="privacy">
+				<div class="policy">
 					<a id="privacy"></a><h3>Privacy Policy</h3>
 					<h4>Information that is gathered from visitors</h4>
 						<p>In common with other websites, log files are stored on the web server saving details such as the visitor's IP address, browser type, referring page and time of visit.</p>
@@ -145,13 +145,10 @@
 						<p>Website visitors may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.</p>
 				</div>
 				
-				
-				<div class="security">
+				<div class="policy">
 					<a id="security"></a><h3>Security Statement</h3>
-					<p>We seek to use reasonable organizational, technical and administrative measures to protect Personal Information under our control. For example, we seek to use Secure Sockets Layer ("SSL") technology for the placement of orders. Unfortunately, no data storage system or data transmission over the Internet can be guaranteed to be 100% secure. Please exercise caution in submitting Personal Information via the Site, especially if you are accessing the Site using a WiFi hotspot or public network. If you have reason to believe that your interaction with us is no longer secure (for example, if you feel that the security of any account that you might have with us has been compromised, or if you are unable to utilize our Site-related SSL technology), please immediately notify us of the problem and place any orders with us over the telephone or in person, instead of using the Site. You may contact us in such circumstances in accordance with the "<a href="#">Contact Us</a>" section below. </p>
+					<p>We seek to use reasonable organizational, technical and administrative measures to protect Personal Information under our control. For example, we seek to use Secure Sockets Layer ("SSL") technology for the placement of orders. Unfortunately, no data storage system or data transmission over the Internet can be guaranteed to be 100% secure. Please exercise caution in submitting Personal Information via the Site, especially if you are accessing the Site using a WiFi hotspot or public network. If you have reason to believe that your interaction with us is no longer secure (for example, if you feel that the security of any account that you might have with us has been compromised, or if you are unable to utilize our Site-related SSL technology), please immediately notify us of the problem and place any orders with us over the telephone or in person, instead of using the Site. You may contact us in such circumstances in accordance with the "<a href="#">Company Info</a>" section below. </p>
 				</div>
-
-				
 
 			</div>
 		</div>

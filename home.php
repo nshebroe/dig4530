@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<title>Lovabulb Home &ndash; Nicole Shebroe</title>
+	<title>Lovabulb Home &ndash; Group 4</title>
 	<link href='http://fonts.googleapis.com/css?family=|Inder|Quicksand:400,700' rel='stylesheet' type='text/css' />
 	<style type='text/css'  media='all'>
 		@import 'css/reset.css';
@@ -34,7 +35,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">2</span>]</a> <span class="textcolor">|</span> <a href="admin.php">Admin</a></p>
+			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">#</span>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -232,21 +233,20 @@
 			<div class="threecol">
 				<div class="infobox">
 					<h4>Company Policies</h4>
-						<p><a href="comingsoon.php">Buying Policy</a></p>
-						<p><a href="comingsoon.php">Shipping Policy</a></p>
-						<p><a href="comingsoon.php">Terms of Service</a></p>
-						<br/><br/><br/>
-					</div>
-			</div>
-			<div class="threecol last">
-				<div class="infobox">
-					<h4>Company Info</h4>
 						<p><a href="policies.php#shipping">Shipping Policy</a></p>
 						<p><a href="policies.php#tax">Tax Policy</a></p>
 						<p><a href="policies.php#return">Return Policy</a></p>
 						<p><a href="policies.php#privacy">Privacy Policy</a></p>
 						<p><a href="policies.php#security">Security Statement</a></p>
 						<br/><br/>
+					</div>
+			</div>
+			<div class="threecol last">
+				<div class="infobox">
+					<h4>Company Info</h4>
+						<p><a href="#">About</a></p>
+						<p><a href="#">Our Team</a></p>
+						<p><a href="#">Blog</a></p>
 					</div>
 			</div>
 		</div>
