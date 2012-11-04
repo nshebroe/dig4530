@@ -536,7 +536,7 @@ body{
 
 
 
-.adminl{
+.adminl, .cohq{
 	float:left;
 	border:1px solid #ddd;
 	border-width:1px 1px;
@@ -800,3 +800,123 @@ body{
 #policies a{
 	color:#59918d;
 }
+
+/*-------------------------------------------- COMPANY BACKGROUND CSS -------*/
+.profile img{
+	clear: left;
+	float: left;
+	max-height: 200px;
+	margin-top: 20px;
+	margin-left: 25px;
+	margin-bottom: 0;
+}
+
+.profile p{
+	float: left;	
+	max-width: 300px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.desc {
+	float: left;
+	margin-left: 10px;
+	margin-top: 75px;	
+}
+
+.desc2{
+	float: left;
+	margin-top: 75px;
+	margin-left: 10px;
+}
+
+.desc3{
+	float: right;
+	margin-top: 75px;
+	margin-right: 10px;	
+}
+
+
+#team{
+	background-color:#ddd;
+	height:700px;
+	padding:10px;
+	border:1px dashed #ccc;
+}
+
+.profile3 img{
+	clear: right;
+	float: right;
+	max-height: 200px;
+	margin-top: 20px;
+	margin-right: 25px;
+	margin-bottom: 0;
+}
+
+.profile3 p{
+	float: right;	
+	max-width: 300px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+
+.profile2 img{
+	clear: left;
+	float: left;
+	max-height: 280px;
+	margin-left: 320px;
+	margin-top: 0;
+}
+
+.profile2 p{
+	float: left;	
+	max-width: 300px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.map{
+	clear: left;
+	float: left;
+	margin-top: 20px;
+	margin-left: 45px;
+	max-height: 100px;	
+}
+
+.hqadd{
+	float: left;
+	margin-top: 50px;
+	margin-left: 175px;	
+}
+
+.hqadd p{
+	font-size: 14px;
+	margin-left: 40px;	
+}
+
+.hqnumber{
+	float: right;
+	font-weight: bold;
+	font-size: 32px;
+	margin-top: 70px;	
+	margin-right: 75px;
+}
+
+.cohq p{
+	font-size: 18px;
+	margin-left: 75px;
+	margin-top: 65px;
+}
+
+.cohq h4{
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 75px;
+	margin-left: 25px;
+}
+
+.cohq{
+	margin-left: 25px;	
+}
+
