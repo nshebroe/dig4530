@@ -801,6 +801,10 @@ body{
 	color:#59918d;
 }
 
+.policy li{
+	list-style-type: circle;	
+}
+
 /*-------------------------------------------- COMPANY BACKGROUND CSS -------*/
 .profile img{
 	clear: left;

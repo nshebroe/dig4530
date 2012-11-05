@@ -94,12 +94,28 @@
 				
 				<div class="policy">
 					<a id="shipping"></a><h3>Shipping Policy</h3>
-						<p>SHIP ME STUFF</p>
+						<h4>Free Ground Shipping to the United States on Orders Over $100</h4>
+                        	<p>If you purchase more $100 of product at lovabulb.com (before sales tax and shipping and handling), you will receive free shipping and handling on orders shipping to the continental United States.<br />In order to receive free shipping and handling on your order, your order must total at least USD$100.00 in merchandise before shipping and handling and sales tax, but after any other discounts. You must select “Ground” as the shipping method when checking out. We will ship your order using USPS, Fedex or UPS, at our option. Offer valid for orders placed via lovabulb.com in the United States and delivered or shipped to a single, valid address within the continental United States only. Not available for shipments to P.O. Boxes. Customers that received free ground shipping on their order, and need to return or exchange an item are responsible for all shipping costs during that process. If you return any portion of an order using free shipping for a refund, we may at our discretion charge you the original shipping and handling charge. Not valid on prior purchases. Occasionally, some items may be out of stock. If multiple items are purchased, the customer has the option of free shipping on items in stock and standard shipping charge on out of stock merchandise when available. Please note that free shipping may take longer than standard delivery. Orders that ship free of charge may take up to 3 business day to fulfill, especially during the holiday season or other peak times. Most standard shipments will arrive to your door within 7 – 10 business days. Large urban centers may experience faster delivery times than rural addresses, therefore we cannot guarantee shipping times. Subject to change at any time and without notice. Limited to stock on hand. Limited time offer.</p>
+                            
+                       <h4>Shipping Methods</h4>
+                       	<p>We offer shipping by United States Parcel Service (USPS) First-Class Mail, Priority Mail and Express Mail as well as FedEx 2nd Day Air and FedEx Standard Overnight to the United States.<br />If you require additional shipping options or help, please send us an email at orders@lovabulb.com or give us a call toll-free at (800) LOV-BULB (1-800-568-2852). We no longer offer shipping by USPS First Class Mail International to Canada or other destinations outside of the United States due to the slowness and poor service levels of this class of service – you must make a special arrangement in advance if you would like to use this level of service, please email or call us.</p>     
 				</div>
 				
 				<div class="policy">
 					<a id="tax"></a><h3>Tax Policy</h3>
-						<p>TAXES!!!!</p>
+						<p>The tax rate applied to your order will generally be the combined state and local rate for the address where your order was shipped. Therefore, the sales tax rate applied to your order may be different for an order shipped to your home address versus an order for the very same items shipped to your work address.<br/></p>
+                        <p>Items sold by Lovabulb and shipped to destinations in the following states are subject to tax:<br /></p>
+                        	<p>California</p>
+                            <p>Kansas</p>
+                            <p>Kentucky</p>
+                            <p>New York</p>
+                            <p>North Dakota</p>
+                            <p>Pennsylvania</p>
+                            <p>Texas</p>
+                            <p>Washington</p>
+                        <p><br />No sales tax is charged when purchasing gift cards; however, purchases paid for with gift cards may be subject to tax.<br /></p>
+                        <h4>Internet Tax Freedom Act</h4>
+                        <p>Companies selling over the Internet are subject to the same sales tax collection requirements as any other retailers. Remote sellers (including Internet retailers and catalog companies) are generally required to collect taxes where they have a physical selling presence. If they do not have any such presence, they are not required to collect sales taxes.<br />The Internet Tax Freedom Act (ITFA) has been renewed through November 1, 2014.<br />The ITFA was primarily intended to prevent state and local governments from imposing new or discriminatory taxes on Internet transactions and on Internet access. Despite the name of the Act, ITFA does not preclude state and local governments from imposing existing sales tax collection requirements on companies selling over the Internet.</p>
 				</div>
 				
 				<div class="policy">
