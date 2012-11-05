@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+
+	if(isset($_SESSION['cart'])){
+		$cart = $_SESSION['cart'];
+		$cart_count = count($cart);
+	}
+	else{
+		$cart_count=0;
+	}
+	
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -35,7 +46,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">#</span>]</a> </p>
+			<p class="user">Welcome, User! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -114,7 +125,7 @@
 				
 				while($featured = mysql_fetch_array($result2)){
 					$imageft=$featured['featuredImage'];
-					$imagepr=$featured['price'];
+					
 					print "<span class='fim'><img src='img/database/$imageft' alt='featured' /></span>";
 				}
 			?>
@@ -212,9 +223,9 @@
 			<div class="threecol">
 				<div class="infobox">
 					<h4>Customer Support</h4>
-						<p><a href="comingsoon.php">Account</a></p>
-						<p><a href="comingsoon.php">Help</a></p>
-						<p><a href="comingsoon.php">Contact</a></p>
+						<p><a href="client.php">Account</a></p>
+						<p><a href="policies.php">Help</a></p>
+						<p><a href="company.php">Contact</a></p>
 						<br/><br/><br/>
 				</div>
 			</div>
@@ -244,9 +255,10 @@
 			<div class="threecol last">
 				<div class="infobox">
 					<h4>Company Info</h4>
-						<p><a href="#">About</a></p>
-						<p><a href="#">Our Team</a></p>
-						<p><a href="#">Blog</a></p>
+						<p><a href="company.php">Our Team</a></p>
+						<p><a href="http://www.tumblr.com/tagged/lamp">Blog</a></p>
+						<br/>
+						<br/><br/><br/>
 					</div>
 			</div>
 		</div>

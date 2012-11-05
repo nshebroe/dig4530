@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+
+	if(isset($_SESSION['cart'])){
+		$cart = $_SESSION['cart'];
+		$cart_count = count($cart);
+	}
+	else{
+		$cart_count=0;
+	}
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -39,7 +50,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">#</span>]</a> </p>
+			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -145,12 +156,13 @@
 							$price=$item['price'];
 							$image=$item['productImage'];
 							$rating=$item['rating'];
+							$id=$item['id'];
 							
 						
 							
 							print "<div class='productdet'>
 								<a href='#'><img src='img/database/$image' alt='product' /></a><br/><div class='ptext'>
-								<div class='productn'><h3>$productName</h3>$price<br/><p><a href='cart.php' class='button'>Add to Cart</a></p></div></div>";
+								<div class='productn'><h3>$productName</h3>$price<br/><p><a href='addToCart.php?id=$id' class='button'>Add to Cart</a></p></div></div>";
 							
 							print "<div class='rating'>";
 							for($i=0;$i<$rating;$i++){
@@ -201,9 +213,9 @@
 			<div class="threecol">
 				<div class="infobox">
 					<h4>Customer Support</h4>
-						<p><a href="comingsoon.php">Account</a></p>
-						<p><a href="comingsoon.php">Help</a></p>
-						<p><a href="comingsoon.php">Contact</a></p>
+						<p><a href="client.php">Account</a></p>
+						<p><a href="policies.php">Help</a></p>
+						<p><a href="company.php">Contact</a></p>
 						<br/><br/><br/>
 				</div>
 			</div>
@@ -233,9 +245,9 @@
 			<div class="threecol last">
 				<div class="infobox">
 					<h4>Company Info</h4>
-						<p><a href="comingsoon.php">About</a></p>
-						<p><a href="comingsoon.php">Our Team</a></p>
-						<p><a href="comingsoon.php">Blog</a></p>
+						<p><a href="company.php">Our Team</a></p>
+						<p><a href="http://www.tumblr.com/tagged/lamp">Blog</a></p>
+						<br/>
 						<br/><br/><br/>
 					</div>
 			</div>

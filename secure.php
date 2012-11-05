@@ -1,7 +1,6 @@
 <?php
-
 ob_start();
-$host="localhost"; // Host name 
+$host="sulley.cah.ucf.edu"; // Host name 
 $username="ni718068"; // Mysql username 
 $password="12Nicole"; // Mysql password 
 $db_name="ni718068"; // Database name 

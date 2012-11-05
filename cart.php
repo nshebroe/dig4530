@@ -1,6 +1,14 @@
-<?php session_start(); 
+<?php 
+	session_start(); 
 
-$_SESSION["cart"] = array(); 
+	if(isset($_SESSION['cart'])){
+		$cart = $_SESSION['cart'];
+		$cart_count = count($cart);
+	}
+	else{
+		$cart_count=0;
+	}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -40,7 +48,7 @@ $_SESSION["cart"] = array();
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor">#</span>]</a> </p>
+			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -103,7 +111,7 @@ $_SESSION["cart"] = array();
 				</div>
 			</div>
 			<div class="threecol">
-				<img src="img/database/misc/sale.jpg" alt="featured" />
+				<a href="catalog.php?category=misc"><img src="img/database/misc/sale.jpg" alt="featured" /></a>
 			</div>
 			<div class="twocol last">
 				<div class="catt">
@@ -139,23 +147,44 @@ $_SESSION["cart"] = array();
 			<div class="tencol last">
 				<div id="cartview">
 					<h1>Cart</h1>
-					<div class="cartitem">
-						<img src="img/database/shade/mustache.jpg" alt="cartitem" />
-						<p>Moustache Shade<br/>
-						$66.99<br/>
-						<a href="#">remove from cart</a></p>
-					</div>
-					<div class="cartitem">
-						<img src="img/database/shade/aloha.jpg" alt="cartitem" />
-						<p>Aloha Shade<br/>
-						$40.99<br/>
-						<a href="#">remove from cart</a></p>
+					<div class="cartitems">
+					<?php
+					
+						$connection = mysql_connect("sulley.cah.ucf.edu", "ni718068", "12Nicole");
+						mysql_select_db("ni718068", $connection);
+	
+						if(isset($cart)){
+							$total_price = 0;
+							
+							for($i=0;$i<$cart_count;$i++){
+								$query3 = "SELECT * from products WHERE id= $cart[$i]";
+								$result3 = mysql_query($query3);
+								while($item = mysql_fetch_array($result3)){
+									$productName=$item['productName'];
+									$price=$item['price'];
+									$image=$item['productImage'];
+									$id=$item['id'];
+									
+									print "<div class='cartitem'>
+									<img src='img/database/$image' alt='product' /><br/><div class='ptext'>
+									<div class='productn'><h3>$productName</h3>$price<br/><p><a href='removeFromCart.php?id=$id' class='button'>Remove From Cart</a></p></div></div>";
+									print "</div>";
+								
+								$total_price=$total_price+$price;
+							}
+						}
+	
+						
+								print "<br/><div class='total'><p><strong>Total:</strong> &#36;$total_price </p></div>";	
+
+							}
+					?>
 					</div>
 					
-					<p><strong>Total:</strong> $107.98</p>
+					
 						<div id="checkout">
 							<h2>Checkout</h2>
-							<form action="order.php" method="post">
+							<form action="success.php" method="post">
 								<table>
 								<tr>
 								<td colspan="3" align="center">
@@ -214,45 +243,7 @@ $_SESSION["cart"] = array();
 
 								</form>
 								
-								 <?php
 								 
-									INSERT INTO `ORDER` (order_time, cust_firstname, cust_lastname, cust_email, cust_country, cust_zip, cust_state, cust_city, cust_address, cust_phone) VALUES ('".get_current_time()."','".$_POST["first_name"]."','".$_POST["last_name"]."','".$_POST["email"]."','".$_POST["country"]."','".$_POST["zip"]."','".$_POST["state"]."','".$_POST["city"]."','".$_POST["address"]."','".$_POST["phone"]."');
-
-
-									$k = 0; //order total value
-									$admin_notification = ""; //a list of product to be emailed to store administrator
-
-									for ($i=0; $i<count($_SESSION["cart"]); $i++)
-									{
-										if ($_SESSION["cart"][$i]) //save this product in the database
-										{
-											$q = db_query("SELECT name, Price, product_code FROM ".products." WHERE id='".(int)$_SESSION["cart"][$i]."'") or die (db_error());
-											if ($r = db_fetch_row($q))
-											{
-												//collect product information in array
-												$tmp = array(
-													$_SESSION["cart"][$i],
-													$r[0],
-													$_SESSION["counts"][$i],
-													($_SESSION["counts"][$i]*$r[1])." ".$currency_iso_3,
-													$r[2]
-												);
-
-												//store ordered products info into the database
-												$sku = trim($tmp[4]) ? "[".$tmp[4]."] " : "";
-												db_query("insert into ".ORDERED_CARTS_TABLE." (orderID, productID, name, price) values ('$oid', '".$tmp[0]."', '".$sku.$tmp[1]."', '".$r[1]."', '".$tmp[2]."');");
-
-												//calculate order amount
-												$k += $_SESSION["counts"][$i]*$r[1];
-
-												//update order notification message sent to store administrator
-												$admin_notification .= $sku.$tmp[1]." (x".$tmp[2]."): ".$tmp[3]."\n";
-
-											}
-										}
-									}
-
-								?> 
 						</div>
 					</div>
 				</div>
@@ -315,9 +306,9 @@ $_SESSION["cart"] = array();
 			<div class="threecol">
 				<div class="infobox">
 					<h4>Customer Support</h4>
-						<p><a href="comingsoon.php">Account</a></p>
-						<p><a href="comingsoon.php">Help</a></p>
-						<p><a href="comingsoon.php">Contact</a></p>
+						<p><a href="client.php">Account</a></p>
+						<p><a href="policies.php">Help</a></p>
+						<p><a href="company.php">Contact</a></p>
 						<br/><br/><br/>
 				</div>
 			</div>
@@ -347,9 +338,9 @@ $_SESSION["cart"] = array();
 			<div class="threecol last">
 				<div class="infobox">
 					<h4>Company Info</h4>
-						<p><a href="comingsoon.php">About</a></p>
-						<p><a href="comingsoon.php">Our Team</a></p>
-						<p><a href="comingsoon.php">Blog</a></p>
+						<p><a href="company.php">Our Team</a></p>
+						<p><a href="http://www.tumblr.com/tagged/lamp">Blog</a></p>
+						<br/>
 						<br/><br/><br/>
 					</div>
 			</div>
