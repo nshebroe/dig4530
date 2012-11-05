@@ -1,14 +1,8 @@
 <?php 
-	session_start(); 
-
-	if(isset($_SESSION['cart'])){
-		$cart = $_SESSION['cart'];
-		$cart_count = count($cart);
-	}
-	else{
-		$cart_count=0;
-	}
-
+	session_start();
+	session_destroy();
+	
+	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -37,7 +31,6 @@
 
 	</script>
 	
-	
 </head>
 
 <body>
@@ -50,7 +43,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
+			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [0]</a> </p>
 		</div>
 	</div>
 </div>
@@ -126,137 +119,11 @@
 </div>
 
 <div class="container">
-	<div id="shop">
+	<div id="comingsoon">
 		<div class="row">
-			<div class="twocol">
-				<div id="subnav">
-					<ul>
-						<li><a href="catalog.php">Shop All</a></li>
-						<li><a href="catalog.php?category=shade">Floor Lamps</a></li>
-						<li><a href="catalog.php?category=misc">Table Lamps</a></li>
-						<li><a href="catalog.php?category=shade">Ceiling Lamps</a></li>
-						<li><a href="catalog.php?category=misc">Wall Lamps</a></li>
-						<li><a href="catalog.php?category=shade">Lamp Shades</a></li>
-						<li><a href="catalog.php?category=misc">Miscellaneous</a></li>
-					</ul>
-				</div>
-				<div id="suggestions">
-					<h3>Suggested Items</h3>
-					<a href="catalog.php"><img src="img/database/shade/aloha.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/shade/moose.jpg" alt="suggestions" /></a><br/>
-					<a href="catalog.php"><img src="img/database/misc/monkey.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/misc/chef.jpg" alt="suggestions" /></a>
-				</div>
-			</div>
-			<div class="tencol last">
-				<div id="cartview">
-					<h1>Cart</h1>
-					<div class="cartitems">
-					<?php
-					
-						$connection = mysql_connect("sulley.cah.ucf.edu", "ni718068", "12Nicole");
-						mysql_select_db("ni718068", $connection);
-	
-						if(isset($cart)){
-							$total_price = 0;
-							
-							for($i=0;$i<$cart_count;$i++){
-								$query3 = "SELECT * from products WHERE id= $cart[$i]";
-								$result3 = mysql_query($query3);
-								while($item = mysql_fetch_array($result3)){
-									$productName=$item['productName'];
-									$price=$item['price'];
-									$image=$item['productImage'];
-									$id=$item['id'];
-									
-									print "<div class='cartitem'>
-									<img src='img/database/$image' alt='product' /><br/><div class='ptext'>
-									<div class='productn'><h3>$productName</h3>$price<br/><p><a href='removeFromCart.php?id=$id' class='button'>Remove From Cart</a></p></div></div>";
-									print "</div>";
-								
-								$total_price=$total_price+$price;
-							}
-						}
-	
-						
-								print "<br/><div class='total'><p><strong>Total:</strong> &#36;$total_price </p></div>";	
-
-							}
-					?>
-					</div>
-					
-					
-						<div id="checkout">
-							<h2>Checkout</h2>
-							<form action="order.php" method="post" name="checkout">
-								<table>
-								<tr>
-								<td colspan="3" align="center">
-								<font color="red">*</font> required<br><br>
-								</td>
-								</tr>
-
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> First name:</td>
-								<td><input type="text" name="first_name" value=""></td>
-								</tr>
-
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Last name:</td>
-								<td><input type="text" name="last_name" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Email:</td>
-								<td><input type="text" name="email" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font>Phone number:</td>
-								<td><input type="text" name="phone" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="3"> </td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font>Address:</td>
-								<td><textarea name="address" rows="4"></textarea></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> City:</td>
-								<td><input type="text" name="city" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> State:</td>
-								<td><input type="text" name="state" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Zip code:</td>
-								<td><input type="text" name="zip" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Country:</td>
-								<td><input type="text" name="country" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Credit Card #:</td>
-								<td><input type="text" name="credit" value=""></td>
-								</tr>
-								<tr>
-								<td colspan="2" align="right"><font color="red">*</font> Security Code:</td>
-								<td><input type="text" name="security" value=""></td>
-								</tr>
-
-								</table>
-
-								<p>
-								<input type="submit" value="Place order!">
-
-								<input type="hidden" name="complete_order" value="1">
-								</p>
-
-								</form>
-								
-								 
-						</div>
-					</div>
-				</div>
+			<div class="twelvecol">
+				<img src="img/comingsoon.png" alt="coming soon"/>
+				<p>Success! Thanks for your order!</p>
 			</div>
 		</div>
 	</div>
