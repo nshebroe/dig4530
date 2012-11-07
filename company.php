@@ -106,7 +106,7 @@
 							<img src="img/nicole.png" alt="Nicole" />
 							<div class="desc">
 								<h3>Nicole Shebroe</h3>
-								<p>The original creator of site, she works tirelessly to make sure any additions or edits are seamless with her vision. She is also the master corroborator, by integrating everyone's work into one place. Not to mention her spiffy work on the back-end PHP.</p>
+								<p>Hi! I'm Nicole. I happen to be the team leader of Lovabulb. My first ideas and designs of Lovabulb's website happen to be the foundation of the final Lovabulb site. I also dabble in PHP to work with both front-end and back-end developing team mates in the Lovabulb Project. I basically run this.</p>
 							</div>
 						</div>
 
@@ -114,7 +114,7 @@
 							<img src="img/jon.png" alt="Jon" />
 							<div class="desc3">
 								<h3>Jonathan Williamson</h3>
-								<p>He pulled all the policies. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p>Hello, I'm Jon! I'm a floater. I enjoy front-end and back-end projects so I like to hop around Lovabulb and chime in where and when I can! From content to data tables, I'm your man. Our mission is to provide the most unique lighting around the world at the lowest prices, and Lovabulb does just that.</p>
 							</div>
 						</div>
 
@@ -122,7 +122,7 @@
 							<img src="img/megan.png" alt="Megan" />
 							<div class="desc">
 								<h3>Megan Morgan</h3>
-								<p>A whiz with photoshop, she created the delightful images. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p>Hi! I'm Megan and I am one of the front-end developers for Lovabulb. I mostly deal with mark up language and content, and of course my front-end buddy Natalie. We basically plump up Lovabulb so that it's good and full of yummy content. We strive to please those with weird lamp fetishes.</p>
 							</div>
 						</div>
 
@@ -130,7 +130,7 @@
 							<img src="img/natalie.png" alt="Natalie" />
 							<div class="desc3">
 								<h3>Natalie Bednarz</h3>
-								<p>Worked to layout newer content onto the site. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p>Hi! I'm Natalie and I am one of the front-end developers for Lovabulb. I handle all of the html and css along side my pal Megan. Together we make Lovabulb a feast to the eyes, that you won't be able to take your eyes off of until of course ...you buy a lamp.</p>
 							</div>
 						</div>
 
@@ -138,7 +138,7 @@
 							<img src="img/bill.png" alt="Bill" />
 							<div class="desc2">
 								<h3>Bill Columbia</h3>
-								<p>Hi my name is Bill. These are some of the terms you will hear out of mouth as I help code the back-end of the site - "SASS!!!!!!! RUBY!!!!!!!!!!!!! GITHUB!!!!!!!!!!!!!!!"</p>	
+								<p>Hey there, I'm Wild Bill! My heart and soul is in PHP. I am the back bone to Lovabulbs' shopping cart system. In other words I am one of the back-end developers for Project Lovabulb.</p>	
 							</div>
 						</div>
 
