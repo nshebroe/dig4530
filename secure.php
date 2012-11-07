@@ -7,7 +7,7 @@ $db_name="ni718068"; // Database name
 $tbl_name="admins"; // Table name 
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("YOU FUCKED UP! cannot connect"); 
+mysql_connect("$host", "$username", "$password")or die("YOU messed UP! cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 
 // Define $myusername and $mypassword 
