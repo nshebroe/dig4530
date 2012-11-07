@@ -190,26 +190,26 @@
 								<table>
 								<tr>
 								<td colspan="3" align="center">
-								<font color="red">*</font> required<br><br>
+								<font color="red">*</font> required<br/><br/>
 								</td>
 								</tr>
 
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> First name:</td>
-								<td><input type="text" name="first_name" value=""></td>
+								<td><input type="text" name="first_name" /></td>
 								</tr>
 
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Last name:</td>
-								<td><input type="text" name="last_name" value=""></td>
+								<td><input type="text" name="last_name" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Email:</td>
-								<td><input type="text" name="email" value=""></td>
+								<td><input type="text" name="email" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font>Phone number:</td>
-								<td><input type="text" name="phone" value=""></td>
+								<td><input type="text" name="phone" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="3"> </td>
@@ -220,19 +220,19 @@
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> City:</td>
-								<td><input type="text" name="city" value=""></td>
+								<td><input type="text" name="city" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> State:</td>
-								<td><input type="text" name="state" value=""></td>
+								<td><input type="text" name="state" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Zip code:</td>
-								<td><input type="text" name="zip" value=""></td>
+								<td><input type="text" name="zip" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Country:</td>
-								<td><input type="text" name="country" value=""></td>
+								<td><input type="text" name="country" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Credit Card #:</td>
@@ -240,7 +240,7 @@
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Security Code:</td>
-								<td><input type="text" name="security" value=""></td>
+								<td><input type="text" name="security" value="" /></td>
 								</tr>
 
 								</table>

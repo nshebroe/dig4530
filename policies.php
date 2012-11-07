@@ -135,7 +135,7 @@
 
 					<a id="return"></a><h3>Return Policy</h3>
 						<p>Like many retailers, we guarantee our products; if an item hasn’t met your expectations, you can bring it back. Unlike most retailers, we also guarantee the product selection advice offered through our catalog, website, and staff; if an item you’ve purchased based on this advice turns out to be unsuitable, you can bring it back. In either case, simply return the item for exchange, refund, repair, or credit. </p>
-						<p>If you have any questions about our guarantee, please, email us at [ Lovabulb ], ask at the Member Service Desk of any location, or call us at [ 1.888.999.9999 ] or [ 3218675309 ] (Local & International).</p> 
+						<p>If you have any questions about our guarantee, please, email us at [ Lovabulb ], ask at the Member Service Desk of any location, or call us at [ 1.888.999.9999 ] or [ 3218675309 ] (Local &amp; International).</p> 
 
 						<h4>Returns and Exchanges</h4>
 							<p>Returns and exchanges can be made at any one of our stores, or by mail. Please call our Service Center, if you wish to return or cancel an order placed online. Please note: Our retail stores cannot accept returns by mail or courier. </p>

@@ -1,9 +1,17 @@
 <?php 
-	session_start();
-	session_destroy();
-	
-	
+	session_start(); 
+
+	if(isset($_SESSION['cart'])){
+		$cart = $_SESSION['cart'];
+		$cart_count = count($cart);
+	}
+	else{
+		$cart_count=0;
+	}
+
 ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -43,7 +51,7 @@
 			<div class="search">
 				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
 			</div>
-			<p class="user"><a href="login.php">Login</a> <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [0]</a> </p>
+			<p class="user"><a href="login.php">Login</a> <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<?php print "$cart_count"; ?>]</a> </p>
 		</div>
 	</div>
 </div>
@@ -94,36 +102,41 @@
 </div>
 
 <div class="container">
-	<div id="cattop">
-		<div class="row">
-			<div class="fourcol">
-				<a href="catalog.php"><img src="img/database/shade/mustachesmall2.jpg" alt="featured" /></a>
-			</div>
-			<div class="threecol">
-				<div class="catt">
-					<h2>Featured Item</h2>
-					<p>Feast your eyes on this moustache shade!</p>
-				</div>
-			</div>
-			<div class="threecol">
-				<a href="catalog.php?category=misc"><img src="img/database/misc/sale.jpg" alt="featured" /></a>
-			</div>
-			<div class="twocol last">
-				<div class="catt">
-					<h2>Current Sales</h2>
-					<p>This week's sale features nightlights. Go crazy!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container">
 	<div id="comingsoon">
 		<div class="row">
 			<div class="twelvecol">
-				<img src="img/comingsoon.png" alt="coming soon"/>
-				<p>Success! Thanks for your order!</p>
+				<?php
+					
+					
+					if(isset($_POST['first_name'])){
+						$first_name=$_POST['first_name'];
+						$last_name=$_POST['last_name'];
+						$email=$_POST['email'];
+						$phone=$_POST['phone'];
+						$address=$_POST['address'];
+						$city=$_POST['city'];
+						$state=$_POST['state'];
+						$zip=$_POST['zip'];
+						$country=$_POST['country'];
+						$credit=$_POST['credit'];
+						$security=$_POST['security'];
+						
+						if($first_name == '' || $last_name == '' || $email == '' || $phone == '' || $address == '' || $city == '' || $state == '' || $zip == '' || $country == '' || $credit == '' || $security == '' ){
+							print "<p>Blank field, <a href='cart.php'>Go back and fix</a></p>";
+						}
+						else{
+							print "<p>Success! Thanks for your order!</p>";
+							session_start();
+							session_destroy();
+						}
+					}
+					else{
+						print "NOPE";
+					}
+					
+					
+					?>
+				
 			</div>
 		</div>
 	</div>
