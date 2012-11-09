@@ -45,7 +45,7 @@ class Comment
 			<div class="comment">
 				<div class="avatar">
 					'.$link_open.'
-					<img src="http://www.gravatar.com/avatar/'.md5($d['email']).'?size=50&amp;default='.urlencode($url).'" />
+					<img src="http://www.gravatar.com/avatar/'.md5($d['email']).'?size=50&amp;default='.urlencode($url).'" alt="avatar" />
 					'.$link_close.'
 				</div>
 				

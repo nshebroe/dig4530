@@ -515,7 +515,7 @@ body{
 	margin-left:-65px;
 }
 
-#admin{
+.admin{
 	margin:10px;
 }
 
@@ -526,7 +526,7 @@ body{
 	border:1px dashed #ccc;
 }
 
-#admin h2{
+.admin h2{
 	font-size:16px;
 	font-weight:800;
 	color:#59918d;
@@ -557,11 +557,11 @@ body{
 	margin-bottom:10px;
 }
 
-#admin a{
+.admin a{
 	color:#59918d;
 }
 
-#admin a:hover{
+.admin a:hover{
 	color:#fff;
 }
 

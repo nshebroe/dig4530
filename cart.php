@@ -48,7 +48,9 @@
 	<div class="twelvecol">
 		<div id="topbar">
 			<div class="search">
-				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
+				<form method="GET" action="search-form.php" class="searchbar">
+						<input type="text" name="keyword"><input type="submit" id="sbb" value="Search!" />
+				</form>
 			</div>
 			<p class="user"><a href="login.php">Login</a> <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>
@@ -216,7 +218,7 @@
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font>Address:</td>
-								<td><textarea name="address" rows="4"></textarea></td>
+								<td><textarea name="address" rows="4" cols="1"></textarea></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> City:</td>
@@ -236,7 +238,7 @@
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Credit Card #:</td>
-								<td><input type="text" name="credit" value=""></td>
+								<td><input type="text" name="credit" value="" /></td>
 								</tr>
 								<tr>
 								<td colspan="2" align="right"><font color="red">*</font> Security Code:</td>
@@ -246,16 +248,16 @@
 								</table>
 
 								<p>
-								<input type="submit" value="Place order!">
+								<input type="submit" value="Place order!" />
 
-								<input type="hidden" name="complete_order" value="1">
+								<input type="hidden" name="complete_order" value="1" />
 								</p>
 
 								</form>
 								
 								 
 						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

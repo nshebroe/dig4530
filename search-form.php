@@ -15,7 +15,7 @@
 
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<title>Lovabulb Client &ndash; Group 4</title>
+	<title>Lovabulb Admin &ndash; Group 4</title>
 	<link href='http://fonts.googleapis.com/css?family=|Inder|Quicksand:400,700' rel='stylesheet' type='text/css' />
 	<style type='text/css'  media='all'>
 		@import 'css/reset.css';
@@ -98,60 +98,54 @@
 	</div>
 </div>
 
+
+
 <div class="container">
-	<div id="cattop">
+	<div class="admin">
 		<div class="row">
-			<div class="fourcol">
-				<a href="catalog.php"><img src="img/database/shade/mustachesmall2.jpg" alt="featured" /></a>
-			</div>
-			<div class="threecol">
-				<div class="catt">
-					<h2>Featured Item</h2>
-					<p>Feast your eyes on this moustache shade!</p>
-				</div>
-			</div>
-			<div class="threecol">
-				<img src="img/database/misc/sale.jpg" alt="featured" />
-			</div>
-			<div class="twocol last">
-				<div class="catt">
-					<h2>Current Sales</h2>
-					<p>This week's sale features nightlights. Go crazy!</p>
+			<div class="twelvecol">
+				<div id="options">
+					<?php
+	//check for submitted search
+	$keyword = $_GET['keyword'];
+	
+		//start search
+		$host="localhost"; // Host name 
+		$username="ni718068"; // Mysql username 
+		$password="12Nicole"; // Mysql password 
+		$db_name="ni718068"; // Database name
+
+		$con = mysql_connect($host, $username, $password);
+
+		if (!$con) {
+			die('Could not connect: ' . mysql_error());
+		}
+
+		mysql_select_db($db_name, $con);
+		//search through descriptions
+		$result = mysql_query("SELECT * 
+		FROM products
+		WHERE description LIKE '%{$keyword}%'");
+
+		while($row = mysql_fetch_array($result)) {
+			$noResults = $row['id'];
+			echo "<strong>" . $row['id'] . "</strong>";
+			echo "<img src='img/database/" . $row['productImage'] . "' /><br /> ";
+			echo $row['description'];
+			echo "<br />";
+		}
+		if ( !isset($noResults) ){
+				echo "<img src='http://bukk.it/golfclap.gif' /> <br />";
+				echo "<strong>Congrats </strong>you're looking for something that does not exist. Wait... if <em>something</em> does not exist, doesn't that mean it's <em>nothing</em>?";
+		}
+		
+?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container">
-	<div id="shop">
-		<div class="row">
-			<div class="twocol">
-				<div id="subnav">
-					<ul>
-						<li><a href="catalog.php">Shop All</a></li>
-						<li><a href="catalog.php?category=shade">Floor Lamps</a></li>
-						<li><a href="catalog.php?category=misc">Table Lamps</a></li>
-						<li><a href="catalog.php?category=shade">Ceiling Lamps</a></li>
-						<li><a href="catalog.php?category=misc">Wall Lamps</a></li>
-						<li><a href="catalog.php?category=shade">Lamp Shades</a></li>
-						<li><a href="catalog.php?category=misc">Miscellaneous</a></li>
-					</ul>
-				</div>
-				<div id="suggestions">
-					<h3>Suggested Items</h3>
-					<a href="catalog.php"><img src="img/database/shade/aloha.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/shade/moose.jpg" alt="suggestions" /></a><br/>
-					<a href="catalog.php"><img src="img/database/misc/monkey.jpg" alt="suggestions" /></a><a href="catalog.php"><img src="img/database/misc/chef.jpg" alt="suggestions" /></a>
-				</div>
-			</div>
-			<div class="tencol last">
-				<div id="mainshop">
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <div class="container">
 	<div id="contactbar">

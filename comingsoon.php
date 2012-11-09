@@ -46,7 +46,9 @@
 	<div class="twelvecol">
 		<div id="topbar">
 			<div class="search">
-				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
+				<form method="GET" action="search-form.php" class="searchbar">
+						<input type="text" name="keyword"><input type="submit" id="sbb" value="Search!" />
+				</form>
 			</div>
 			<p class="user">Welcome, user! <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>

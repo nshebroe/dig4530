@@ -11,18 +11,19 @@
 	
 	
 	// Error reporting:
-		error_reporting(E_ALL^E_NOTICE);
+	error_reporting(E_ALL^E_NOTICE);
 
-		include "connect.php";
-		include "comment.class.php";
+	include "connect.php";
+	include "comment.class.php";
 
-		$comments = array();
-		$result = mysql_query("SELECT * FROM comments ORDER BY id ASC");
+	$comments = array();
+	$result = mysql_query("SELECT * FROM comments ORDER BY id ASC");
 
-		while($row = mysql_fetch_assoc($result))
-		{
-			$comments[] = new Comment($row);
-		}		
+	while($row = mysql_fetch_assoc($result))
+	{
+		$comments[] = new Comment($row);
+	}
+	
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
@@ -48,7 +49,7 @@
 	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
 	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.3"></script>
 	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	
+	<script type="text/javascript" src="js/script.js"></script>
 	<style type="text/css">
 		.fancybox-custom .fancybox-skin {
 			box-shadow: 0 0 50px #222;
@@ -85,7 +86,9 @@
 	<div class="twelvecol">
 		<div id="topbar">
 			<div class="search">
-				<input type="text" class="searchbar"></input><input type="submit" name="sa" value="Submit" id="sbb"></input>
+				<form method="GET" action="search-form.php" class="searchbar">
+						<input type="text" name="keyword"><input type="submit" id="sbb" value="Search!" />
+				</form>
 			</div>
 			<p class="user"><a href="login.php">Login</a> <span class="textcolor">|</span> <a href="home.php">Home</a> <span class="textcolor">|</span> <a href="client.php">My Account</a> <span class="textcolor">|</span> <a href="cart.php">Cart [<span class="textcolor"><?php print "$cart_count"; ?></span>]</a> </p>
 		</div>
@@ -215,10 +218,7 @@
 							print "</div></div>";
 						}
 				
-							$result4 = mysql_query($query4);
-								while($item = mysql_fetch_array($result4)){
-									$review=$item['review'];
-								}
+						
 								
 								
 							print "<div id='test' style='display:none;width:350px;'>";
@@ -228,23 +228,25 @@
 								}
 								
 									print "<div id='addCommentContainer'>
-										<p>Add a Comment</p>
-										<form id='addCommentForm' method='post' action=''>
-											<div>
-												<label for='name'>Your Name</label>
-												<input type='text' name='name' id='name' />
-												
-												<label for='email'>Your Email</label>
-												<input type='text' name='email' id='email' />
-												
-												
-												<label for='body'>Comment Body</label>
-												<textarea name='body' id='body' cols='20' rows='5'></textarea>
-												
-												<input type='submit' id='submit' value='Submit' />
+												<p>Add a Comment</p>
+												<form id='addCommentForm' method='post' action=''>
+													<div>
+														<label for='name'>Your Name</label>
+														<input type='text' name='name' id='name' />
+														
+														<label for='email'>Your Email</label>
+														<input type='text' name='email' id='email' />
+														
+														<label for='url'>Website (not required)</label>
+														<input type='text' name='url' id='url' />
+														
+														<label for='body'>Comment Body</label>
+														<textarea name='body' id='body' cols='20' rows='5'></textarea>
+														
+														<input type='submit' id='submit' value='Submit' />
+													</div>
+												</form>
 											</div>
-										</form>
-									</div>
 
 									
 							</div>";
@@ -521,12 +523,12 @@
 			openEffect  : 'none',
 			closeEffect : 'none',
 			afterLoad   : function() {
-				this.inner.prepend( '<h1>Reviews</h1>' );
+				this.inner.prepend( 'Reviews' );
 				this.content = this.content.html();
 			}
 });
 	</script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
